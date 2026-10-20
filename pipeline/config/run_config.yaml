@@ -1,0 +1,66 @@
+# PRX Aggregated Contacts Pipeline — run configuration
+# Edit this file per run; nothing else should need to change between months.
+
+run:
+  start_date: "2026-05-01"      # inclusive
+  end_date: "2026-10-01"        # exclusive (i.e. data through 2026-09-30 -- full-September LimeChat
+                                 # export, confirmed by direct scan 09-01..09-30. Orders/Calls extended to match.)
+  version_tag: "v5"    # v5: full-September LimeChat (replaces the 09-01..09-27 export) + Orders/Calls
+                        # extended to 09-30, 2026-10-06
+  # Full-range Zoho data is still not available (only a 9-day window as of this writing) — a real,
+  # unresolved coverage gap, not fixed by this run. See plan's Open Items.
+  # Set false to hard-stop instead of producing a partial-coverage report.
+  allow_partial_coverage: true
+
+clickhouse:
+  service_id: "790ddad5-a6ff-4b03-b135-9292547ed6b6"   # PRx Nucleus
+  database: "prx_prod_db"
+  # Internal/QA user_id exclusion list, carried over from the validated BRD/brief SQL.
+  qa_user_ids: [67815,1680,63368,1939,30405,7276,17634,13516,2702,2695,2697,2703,2700,2698,2699,10411,5360449]
+  # Order-validity filter, reused verbatim from the brief (do not re-derive by trial and error).
+  excluded_order_status_ids: [0,81,2,3,4,82]
+
+limechat:
+  raw_dir: "raw/limechat"
+  # Which file to treat as "the" July export — both raw dumps in Data dumps/Limechat contain the
+  # exact same 182,344 Ticket IDs (confirmed via set-diff) but differ in field VALUES (different MD5).
+  # Picked the larger file (more bytes -> likely fuller/less-truncated free-text fields) as a
+  # provisional default. OPEN ITEM: get LimeChat's own export-history timestamp to confirm which
+  # export is actually authoritative, or re-export July fresh.
+  july_file_to_use: "2026-07_july.csv"
+  # Bot-only "is_handoff?=FALSE" rows must pass this allowlist before counting as a contact, per the
+  # BRD (counting all such rows overcounts ~3.5x with single-message/tracking noise).
+  # OPEN ITEM: this list does not exist in any source doc yet — populated here empirically from the
+  # most frequent System Tags flow-completion tokens seen in the actual May-July data as a *starting*
+  # allowlist. MUST be reviewed/approved by the BRD owner before results are treated as final.
+  bot_only_system_tags_allowlist_source: "reference/system_tags_rules.csv"
+
+zoho:
+  raw_dir: "raw/zoho"
+  # OPEN ITEM: the dropped export only covers 2026-05-29 to 2026-06-06 (9 days) despite being
+  # labeled "90 Days Dump" internally. A wider export is needed for a real May-Aug run; the
+  # pipeline processes whatever is present and reports actual coverage in Run_Metadata.
+
+calls:
+  # Pulled live from ClickHouse each run (see scripts/00_pull_calls_raw.py) — no static file.
+  agent_outbound_task_name: "Missed Call Support"
+  agent_outbound_office_hours_start: "08:00"
+  agent_outbound_office_hours_end: "20:00"
+  agent_outbound_timezone: "Asia/Kolkata"   # OPEN ITEM: BRD doesn't state TZ explicitly; assumed IST (PRX is India-based). Confirm.
+
+fallback_join:
+  window_days: 20
+  # Convention standardized across all 3 channels (LimeChat notebook's version): fallback order's
+  # created_at must be strictly EARLIER than the contact timestamp. (Zoho notebook had a slightly
+  # different inclusive boundary — standardized here per the brief's recommendation.)
+
+missing_value_literals: ["-", "", "N/A", "NA", "n/a", "None", "null", "nan", "NaN"]
+
+dedup:
+  # OPEN ITEM: brief flags this rule as having changed once already — confirm with stakeholder.
+  group_by: ["final_order_id", "normalized_sub_disposition"]
+  sort_by: "created_at"
+  primary_rule: "first_actionable_else_first_overall"
+
+resolution:
+  window_hours: 48

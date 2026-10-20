@@ -1,0 +1,28 @@
+{
+  "version_tag": "v5",
+  "range_start": "2026-05-01",
+  "range_end_exclusive": "2026-10-01",
+  "generated_at_utc": "2026-10-20T12:05:05+00:00",
+  "months": [
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "channels": [
+    "Ringg",
+    "Agent IB",
+    "Agent OB WH (connected)",
+    "LimeChat Bot",
+    "LimeChat Bot + Agent",
+    "Email",
+    "Agent OB WH (completed)",
+    "Agent OB WH (other)"
+  ],
+  "caveats": [
+    "Latest month is right-censored: orders placed late in the month have not generated all their contacts yet, so its IPO/CPO read low.",
+    "Zoho (Email) coverage ends 2026-08-25; Email is 0 afterwards.",
+    "Only order-linked Support contacts are counted (contacts with no Order ID are excluded from CPO)."
+  ]
+}

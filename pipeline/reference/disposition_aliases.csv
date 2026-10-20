@@ -1,0 +1,11 @@
+kind,legacy_value,master_disposition,master_sub_disposition,notes
+sub,unprofessional_behavior_by_executive,delivery_issues,unprofessional_behavior_by_delivery_executive,legacy spelling (Ringg / Agent OB)
+sub,doctor_consultation_unsatisfactory,consultation_and_medicine,doctor_consultation_was_unsatisfactory,legacy spelling (Ringg / Agent OB)
+sub,defective_or_damaged_device_accessory,return_and_pickup,defective_or_damaged_device_or_accessory,legacy spelling (Ringg / Agent OB)
+sub,behaviour_support_team,enquiry_and_feedback,behaviour_customer_support_team,legacy spelling (Ringg)
+sub,callback_requested,open_valid_contact,call_back,legacy spelling (Ringg / Agent OB)
+sub,wrong_item_delivered,return_and_pickup,different_item_delivered_than_ordered,legacy name for the same failure (single wrong item delivered)
+sub,shipment_rejected_due_to_damage,delivery_issues,shipment_rejected_due_to_damage_or_tampering,legacy spelling
+sub,do_not_call,open_valid_contact,do_not_call_(dnc),legacy spelling
+disposition,language_barrier,open_valid_contact,language_barrier,master has Language Barrier as a sub-disposition under Open; some sources send it as the disposition
+sub,unable_to_track_shipment,delivery_issues,shipment_status_query_(no_delay),renamed to Shipment status query (no delay) in June -- same sub-disposition

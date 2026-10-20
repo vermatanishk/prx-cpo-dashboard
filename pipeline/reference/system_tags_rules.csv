@@ -1,0 +1,91 @@
+priority,token,disposition,sub_disposition,sales_or_support,notes
+1,track_order_delayed,Delivery Issues,delayed_or_likely_to_be_delayed,Support,
+2,unable_to_track_order,Delivery Issues,shipment_status_query_(no_delay),Support,renamed to Shipment status query (no delay) in June -- same sub-disposition
+3,completed_track_order_flow,Delivery Issues,shipment_status_query_(no_delay),Support,generic tracking query when no delay-specific token present
+4,flow_order_tracking,Delivery Issues,shipment_status_query_(no_delay),Support,
+5,track_order,Delivery Issues,shipment_status_query_(no_delay),Support,
+6,flow_name_prx__track_order_entry,Delivery Issues,shipment_status_query_(no_delay),Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 68.5% Support-team; equivalent of track_order
+7,select_order_id,Delivery Issues,shipment_status_query_(no_delay),Support,order-tracking sub-flow step
+8,fetch_orders,Delivery Issues,shipment_status_query_(no_delay),Support,order-tracking sub-flow step
+9,change_shipping_address,Delivery Issues,address_change_request,Support,
+10,reschedule_delivery,Delivery Issues,early_delivery_request,Support,low confidence - flow name ambiguous on direction (early vs reschedule)
+11,faq_delivery_time,Delivery Issues,,Support,legacy sub wants_to_receive_medicine_on_exact_day is not in the master; parent only
+12,delivery_boy_related_issues,Delivery Issues,unprofessional_behavior_by_delivery_executive,Support,
+13,order_delivery_complaint,Delivery Issues,delayed_or_likely_to_be_delayed,Support,
+14,cancel_order,Order Management,cancellation_request_for_full_order,Support,
+15,completed_cancel_order_flow,Order Management,cancellation_request_for_full_order,Support,
+16,cancel_this_order,Order Management,cancellation_request_for_full_order,Support,
+17,flow_name_prx__cancel_order_entry,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 81.9% Support-team; equivalent of cancel_order
+18,flow_name_prx__cancel_confirm,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 90.9% Support-team; step inside the cancel flow
+19,flow_name_prx__cancel_others,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 85.1% Support-team; cancel-reason step
+20,flow_name_prx__cancel_order_related_issues,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 85.5% Support-team; cancel-reason step
+21,flow_name_prx__cancel_delivery_reasons,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 88.3% Support-team; cancel-reason step
+22,flow_name_prx__cancel_price_reasons,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 93.0% Support-team; cancel-reason step
+23,flow_name_prx__cancel_payment_reasons,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: cancel-reason step (low volume)
+24,flow_name_prx__cancel_wrong_address,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: cancel-reason step (low volume)
+25,flow_name_prx__cancel_address_contact,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: cancel-reason step (low volume)
+26,prx_cancel_order_api_failed,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 91.3% Support-team; cancel attempt failed
+27,cancel_anyway,Order Management,cancellation_request_for_full_order,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 92.2% Support-team; confirms cancel
+28,unable_to_use_coupon,Order Management,coupon_code_not_working,Support,
+29,order_not_moving_forward,Order Management,prescription_uploaded_but_order_not_placed,Support,
+30,no_order_confirmation,Order Management,prescription_uploaded_but_order_not_placed,Support,
+31,incomplete_order_received,Order Management,prescription_uploaded_but_order_not_placed,Support,
+32,post_order_changes,Order Management,modification_of_items_in_order,Support,
+33,upload_rx,Order Management,prescription_rejected_or_failed_to_upload,Support,generic rx-upload-flow signal; may also be a Sales pre-purchase upload - low confidence
+34,wrong_product,Return & Pickup,different_item_delivered_than_ordered,Support,single wrong item delivered
+35,damaged_product_complaint,Return & Pickup,damaged_packaging_or_container,Support,
+36,defective_product_complaint,Return & Pickup,defective_or_damaged_device_or_accessory,Support,
+37,return_order,Return & Pickup,,Support,"generic return-flow signal, no reason captured (no master sub); ranked BELOW the reason tags so a specific reason on the same ticket wins"
+38,completed_return_order_flow,Return & Pickup,,Support,"generic return-flow signal, no reason captured (no master sub); ranked BELOW the reason tags so a specific reason on the same ticket wins"
+39,flow_name_prx__return_order_status_flow,Return & Pickup,,Support,"new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 72.4% Support-team; return-status query, no master sub"
+40,track_return_status,Return & Pickup,,Support,"new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 66.6% Support-team; return-status query, no master sub"
+41,refund_order,Payments & Refunds,refund_not_credited_to_account,Support,
+42,refund_problems,Payments & Refunds,refund_not_credited_to_account,Support,
+43,payment_problem,Payments & Refunds,error_while_making_payment,Support,
+44,price_mismatch_problems,Sales Related,,Sales,price_has_increased is a Sales disposition (EIR-confirmed 2026-10-06)
+45,cashback_problems,Wallet & Rewards,cashback_not_credited_after_order,Support,
+46,bad_service_complaint,Enquiry & Feedback,behaviour_customer_support_team,Support,
+47,not_effective,Consultation & Medicine,doctor_consultation_was_unsatisfactory,Support,"medicine 'not effective' flow token - closest match, low confidence"
+48,no_call_received,Consultation & Medicine,doctor_did_not_call_or_call_was_missed,Support,
+49,flow_product_purchase,Sales Related,,Sales,
+50,quick_buy,Sales Related,,Sales,
+51,price_of_products,Sales Related,,Sales,
+52,show_more_products,Sales Related,,Sales,
+53,browse_products,Sales Related,,Sales,
+54,product_benefits,Sales Related,,Sales,
+55,get_offers,Sales Related,,Sales,
+56,show_bestseller,Sales Related,,Sales,
+57,reorder,Sales Related,,Sales,
+58,completed_reorder_flow,Sales Related,,Sales,
+59,call_order,Sales Related,,Sales,
+60,faq_how_to_order,Sales Related,,Sales,
+61,faq_cash_on_delivery,Sales Related,,Sales,
+62,faq_exchange_policy,Sales Related,,Sales,
+63,faq_payment_methods,Sales Related,,Sales,
+64,faq_shipping_india,Sales Related,,Sales,
+65,faq_shipping_availability,Sales Related,,Sales,
+66,faq_shipping_charges,Sales Related,,Sales,
+67,faq_store_availability,Sales Related,,Sales,
+68,faq_app_link,Sales Related,,Sales,
+69,faq_job,Enquiry & Feedback,job_enquiry,Support,
+70,faq_refund_policy,Payments & Refunds,delay_in_processing_refund,Support,"policy-query flavor, low confidence"
+71,faq_place_of_origin,Enquiry & Feedback,medicine_supplier_enquiry,Support,
+72,faq_how_different,Consultation & Medicine,query_about_substitutes_or_branded_generics,Support,
+73,show_previous_orders,Sales Related,,Sales,
+74,flow_name_prx__agent_handoff_sales,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 5.4% Support-team: sales handoff
+75,completed_call_to_order_flow,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 7.1% Support-team: call-to-order
+76,call_to_order,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 6.7% Support-team: call-to-order
+77,flow_name_prx__call_to_order,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 7.1% Support-team: call-to-order
+78,flow_name_image_flow,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 5.8% Support-team: prescription image flow
+79,upload_prescription,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 2.4% Support-team: pre-purchase prescription upload
+80,flow_name_prx__upload_prescription,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 2.6% Support-team: pre-purchase prescription upload
+81,type_medicine_name,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 2.3% Support-team: shopping quick-reply
+82,flow_name_prx__type_medicine,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 2.3% Support-team: shopping flow
+83,order_medicine,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 4.2% Support-team: shopping quick-reply
+84,flow_name_prx__order_medicine,Sales Related,,Sales,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 4.2% Support-team: shopping flow
+85,keep_order,Order Management,order_cancelled_or_edited_without_permission,Support,low confidence
+86,how_to_care,Consultation & Medicine,dosage_or_usage_related_query,Support,
+87,get_support,,,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 82.5% Support-team; user chose Support in the main menu
+88,talk_to_agent,,,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 96.7% Support-team; asked for a human
+89,issue_with_my_order,,,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 87.4% Support-team; post-order issue menu pick
+90,issues_with_my_order,,,Support,new tag format (from 2026-08-01); intent learned from Team-Name-labelled tickets: 71.7% Support-team; post-order issue menu pick

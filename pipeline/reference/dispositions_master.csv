@@ -1,0 +1,90 @@
+status,disposition,sub_disposition,order_id_requirement,effective_date,sub_disposition_normalized
+Not Connected,Open,RNR,Optional,2026-03-12,rnr
+Not Connected,Open,Busy,Optional,2026-03-12,busy
+Not Connected,Open,Number does not Exit,Optional,2026-03-12,number_does_not_exit
+Not Connected,Open,Do Not Call (DNC),Optional,2026-03-12,do_not_call_(dnc)
+Not Connected,Open,Switched off,Optional,2026-03-12,switched_off
+Not Connected,Open,Incoming calls are restricted,Optional,2026-03-12,incoming_calls_are_restricted
+Not Connected,Open,Invalid/Wrong Number,Optional,2026-03-12,invalid_wrong_number
+Not Connected,Open,Not Reachable,Optional,2026-03-12,not_reachable
+Not Connected,Open,Voice Mail,Optional,2026-03-12,voice_mail
+Not Connected,Open,Invalid Task,Optional,2026-03-12,invalid_task
+Connected,Open,Call back,Optional,2026-03-12,call_back
+Connected,Open,Add number to DND list,Optional,2026-03-12,add_number_to_dnd_list
+Connected,Open,Language Barrier,Optional,2026-03-12,language_barrier
+Connected,Open,Call on different number,Optional,2026-03-12,call_on_different_number
+Connected,Open,Test Lead,Optional,2026-03-12,test_lead
+Connected,Sales Related,Sales Related - Created a New Task,Optional,2026-03-12,sales_related_created_a_new_task
+Connected,Enquiry & Feedback,Bulk order enquiry,Optional,2026-03-12,bulk_order_enquiry
+Connected,Enquiry & Feedback,Job enquiry,Optional,2026-03-12,job_enquiry
+Connected,Enquiry & Feedback,Medicine supplier enquiry,Optional,2026-03-12,medicine_supplier_enquiry
+Connected,Enquiry & Feedback,Corporate partnership enquiry,Optional,2026-03-12,corporate_partnership_enquiry
+Connected,Enquiry & Feedback,Junk or spam,Optional,2026-03-12,junk_or_spam
+Connected,Enquiry & Feedback,Others,Optional,2026-03-12,others
+Connected,Enquiry & Feedback,Behaviour - Sales Team,Optional,2026-03-12,behaviour_sales_team
+Connected,Enquiry & Feedback,Behaviour - Customer Support Team,Optional,2026-03-12,behaviour_customer_support_team
+Connected,Account & App,Account deletion request,Optional,2026-03-12,account_deletion_request
+Connected,Account & App,App or website not working,Optional,2026-03-12,app_or_website_not_working
+Connected,Account & App,Profile updation request,Optional,2026-03-12,profile_updation_request
+Connected,Account & App,Stop promotional communication request,Optional,2026-03-12,stop_promotional_communication_request
+Connected,Account & App,Unable to login,Optional,2026-03-12,unable_to_login
+Connected,Account & App,Issue not listed,Optional,2026-03-12,issue_not_listed
+Connected,Consultation & Medicine,Availability or price related query,Optional,2026-03-12,availability_or_price_related_query
+Connected,Consultation & Medicine,Doctor consultation was unsatisfactory,Mandatory,2026-03-12,doctor_consultation_was_unsatisfactory
+Connected,Consultation & Medicine,Doctor did not call or call was missed,Mandatory,2026-03-12,doctor_did_not_call_or_call_was_missed
+Connected,Consultation & Medicine,Dosage or usage related query,Optional,2026-03-12,dosage_or_usage_related_query
+Connected,Consultation & Medicine,Prescription copy request,Mandatory,2026-03-12,prescription_copy_request
+Connected,Consultation & Medicine,Query about substitutes or branded generics,Optional,2026-03-12,query_about_substitutes_or_branded_generics
+Connected,Consultation & Medicine,Side-effect or reaction reported,Mandatory,2026-03-12,side_effect_or_reaction_reported
+Connected,Consultation & Medicine,Issue not listed,Optional,2026-03-12,issue_not_listed
+Connected,Delivery Issues,Address change request,Mandatory,2026-03-12,address_change_request
+Connected,Delivery Issues,Alternate number updation request,Mandatory,2026-03-12,alternate_number_updation_request
+Connected,Delivery Issues,Delayed or likely to be delayed,Mandatory,2026-03-12,delayed_or_likely_to_be_delayed
+Connected,Delivery Issues,Early delivery request,Mandatory,2026-03-12,early_delivery_request
+Connected,Delivery Issues,Marked delivered but not received,Mandatory,2026-03-12,marked_delivered_but_not_received
+Connected,Delivery Issues,Shipment rejected due to damage or tampering,Mandatory,2026-03-12,shipment_rejected_due_to_damage_or_tampering
+Connected,Delivery Issues,Shipment status query (no delay),Mandatory,2026-03-12,shipment_status_query_(no_delay)
+Connected,Delivery Issues,Unprofessional behavior by delivery executive,Mandatory,2026-03-12,unprofessional_behavior_by_delivery_executive
+Connected,Delivery Issues,Issue not listed,Mandatory,2026-03-12,issue_not_listed
+Connected,Edge Membership,Cancellation of membership request,Optional,2026-03-12,cancellation_of_membership_request
+Connected,Edge Membership,Fee paid but membership not activated,Optional,2026-03-12,fee_paid_but_membership_not_activated
+Connected,Edge Membership,Free consultation benefit not working,Optional,2026-03-12,free_consultation_benefit_not_working
+Connected,Edge Membership,Free delivery benefit not working,Optional,2026-03-12,free_delivery_benefit_not_working
+Connected,Edge Membership,Renewal related query,Optional,2026-03-12,renewal_related_query
+Connected,Edge Membership,Issue not listed,Optional,2026-03-12,issue_not_listed
+Connected,Order Management,Cancellation request for full order,Mandatory,2026-03-12,cancellation_request_for_full_order
+Connected,Order Management,Coupon code not working,Optional,2026-03-12,coupon_code_not_working
+Connected,Order Management,Invoice copy request,Mandatory,2026-03-12,invoice_copy_request
+Connected,Order Management,Modification of items in order,Mandatory,2026-03-12,modification_of_items_in_order
+Connected,Order Management,Order cancelled or edited without permission,Mandatory,2026-03-12,order_cancelled_or_edited_without_permission
+Connected,Order Management,Prescription rejected or failed to upload,Optional,2026-03-12,prescription_rejected_or_failed_to_upload
+Connected,Order Management,Prescription uploaded but order not placed,Optional,2026-03-12,prescription_uploaded_but_order_not_placed
+Connected,Order Management,Unable to place a new order,Optional,2026-03-12,unable_to_place_a_new_order
+Connected,Order Management,Issue not listed,Mandatory,2026-03-12,issue_not_listed
+Connected,Payments & Refunds,Amount deducted but order not placed,Optional,2026-03-12,amount_deducted_but_order_not_placed
+Connected,Payments & Refunds,Amount deducted twice,Optional,2026-03-12,amount_deducted_twice
+Connected,Payments & Refunds,Change COD to Prepaid request,Mandatory,2026-03-12,change_cod_to_prepaid_request
+Connected,Payments & Refunds,Delay in processing refund,Mandatory,2026-03-12,delay_in_processing_refund
+Connected,Payments & Refunds,Error while making payment,Optional,2026-03-12,error_while_making_payment
+Connected,Payments & Refunds,Incorrect amount refunded,Mandatory,2026-03-12,incorrect_amount_refunded
+Connected,Payments & Refunds,Refund not credited to account,Mandatory,2026-03-12,refund_not_credited_to_account
+Connected,Payments & Refunds,Unable to add refund details,Mandatory,2026-03-12,unable_to_add_refund_details
+Connected,Payments & Refunds,Issue not listed,Mandatory,2026-03-12,issue_not_listed
+Connected,Return & Pickup,Damaged packaging or container,Mandatory,2026-03-12,damaged_packaging_or_container
+Connected,Return & Pickup,Defective or damaged device or accessory,Mandatory,2026-03-12,defective_or_damaged_device_or_accessory
+Connected,Return & Pickup,Different item delivered than ordered,Mandatory,2026-03-12,different_item_delivered_than_ordered
+Connected,Return & Pickup,Expired or near expiry,Mandatory,2026-03-12,expired_or_near_expiry
+Connected,Return & Pickup,Missing or less quantity received,Mandatory,2026-03-12,missing_or_less_quantity_received
+Connected,Return & Pickup,No longer needed,Mandatory,2026-03-12,no_longer_needed
+Connected,Return & Pickup,Pickup delayed or refused by courier,Mandatory,2026-03-12,pickup_delayed_or_refused_by_courier
+Connected,Return & Pickup,Spilled or broken or spoiled contents,Mandatory,2026-03-12,spilled_or_broken_or_spoiled_contents
+Connected,Return & Pickup,Wrong item ordered,Mandatory,2026-03-12,wrong_item_ordered
+Connected,Return & Pickup,Issue not listed,Mandatory,2026-03-12,issue_not_listed
+Connected,Wallet & Rewards,Cashback not credited after order,Mandatory,2026-03-12,cashback_not_credited_after_order
+Connected,Wallet & Rewards,PRx Coins expired incorrectly,Optional,2026-03-12,prx_coins_expired_incorrectly
+Connected,Wallet & Rewards,Query about Refer and Earn,Optional,2026-03-12,query_about_refer_and_earn
+Connected,Wallet & Rewards,Referral earning not credited,Optional,2026-03-12,referral_earning_not_credited
+Connected,Wallet & Rewards,Unable to apply wallet balance,Optional,2026-03-12,unable_to_apply_wallet_balance
+Connected,Wallet & Rewards,Issue not listed,Optional,2026-03-12,issue_not_listed
+Connected,Enquiry & Feedback,Charges or fees related,optional,2026-06-03,charges_or_fees_related
+Connected,Open,Call dropped or disconnected,optional,2026-06-03,call_dropped_or_disconnected

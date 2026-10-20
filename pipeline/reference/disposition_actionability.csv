@@ -1,0 +1,174 @@
+Sub-Disposition (Raw Key),Display Name,Status,Disposition (Parent Category),Actionable Classification,Notes,is_legacy_unmapped,sub_disposition_normalized
+account_deletion_request,Account deletion request,Connected,Account & App,Actionable,,False,account_deletion_request
+add_number_to_dnd_list,Add number to DND list,Connected,Open,Non-Actionable,,False,add_number_to_dnd_list
+address_change_request,Address change request,Connected,Delivery Issues,Actionable,,False,address_change_request
+already_bought_from_prx,Already Bought From Prx,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,already_bought_from_prx
+alternate_number_updation_request,Alternate number updation request,Connected,Delivery Issues,Actionable,,False,alternate_number_updation_request
+amount_deducted_but_order_not_placed,Amount deducted but order not placed,Connected,Payments & Refunds,Actionable,,False,amount_deducted_but_order_not_placed
+amount_deducted_twice,Amount deducted twice,Connected,Payments & Refunds,Actionable,,False,amount_deducted_twice
+app_or_website_not_working,App or website not working,Connected,Account & App,Actionable,,False,app_or_website_not_working
+availability_or_price_related_query,Availability or price related query,Connected,Consultation & Medicine,Actionable,,False,availability_or_price_related_query
+ayurvedic_homeopathic_medicine,Ayurvedic Homeopathic Medicine,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,ayurvedic_homeopathic_medicine
+banned_items,Banned Items,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,banned_items
+behaviour_customer_support_team,Behaviour - Customer Support Team,Connected,Enquiry & Feedback,Actionable,,False,behaviour_customer_support_team
+behaviour_sales_team,Behaviour - Sales Team,Connected,Enquiry & Feedback,Actionable,,False,behaviour_sales_team
+behaviour_support_team,Behaviour Support Team,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,behaviour_support_team
+better_price_was_available_outside,Better Price Was Available Outside,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,better_price_was_available_outside
+bought_from_outside_;_will_order_next_time,Bought From Outside ; Will Order Next Time,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,bought_from_outside_;_will_order_next_time
+bought_from_outside_will_order_next_time,Bought From Outside Will Order Next Time,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,bought_from_outside_will_order_next_time
+bulk_order_enquiry,Bulk order enquiry,Connected,Enquiry & Feedback,Actionable,,False,bulk_order_enquiry
+busy,Busy,Not Connected,Open,Non-Actionable,,False,busy
+call_back,Call back,Connected,Open,Non-Actionable,,False,call_back
+call_dropped_or_disconnected,Call dropped or disconnected,Connected,Open,Non-Actionable,,False,call_dropped_or_disconnected
+call_on_different_number,Call on different number,Connected,Open,Non-Actionable,,False,call_on_different_number
+callback_requested,Callback Requested,-,Open,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,callback_requested
+cancellation_of_membership_request,Cancellation of membership request,Connected,Edge Membership,Actionable,,False,cancellation_of_membership_request
+cancellation_request_for_full_order,Cancellation request for full order,Connected,Order Management,Actionable,,False,cancellation_request_for_full_order
+cart_link_shared,Cart Link Shared,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,cart_link_shared
+cashback_not_credited_after_order,Cashback not credited after order,Connected,Wallet & Rewards,Actionable,,False,cashback_not_credited_after_order
+change_cod_to_prepaid_request,Change COD to Prepaid request,Connected,Payments & Refunds,Actionable,,False,change_cod_to_prepaid_request
+charges_or_fees_related,Charges or fees related,Connected,Enquiry & Feedback,Actionable,,False,charges_or_fees_related
+corporate_partnership_enquiry,Corporate partnership enquiry,Connected,Enquiry & Feedback,Actionable,,False,corporate_partnership_enquiry
+coupon_code_not_working,Coupon code not working,Connected,Order Management,Actionable,,False,coupon_code_not_working
+currently_out_of_stock,Currently Out Of Stock,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,currently_out_of_stock
+damaged_packaging_or_container,Damaged packaging or container,Connected,Return & Pickup,Actionable,,False,damaged_packaging_or_container
+defective_or_damaged_device_accessory,Defective Or Damaged Device Accessory,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,defective_or_damaged_device_accessory
+defective_or_damaged_device_or_accessory,Defective or damaged device or accessory,Connected,Return & Pickup,Actionable,,False,defective_or_damaged_device_or_accessory
+delay_in_processing_refund,Delay in processing refund,Connected,Payments & Refunds,Actionable,,False,delay_in_processing_refund
+delayed_or_likely_to_be_delayed,Delayed or likely to be delayed,Connected,Delivery Issues,Actionable,,False,delayed_or_likely_to_be_delayed
+delivery_attempt,Delivery Attempt,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,delivery_attempt
+delivery_attempted,Delivery Attempted,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,delivery_attempted
+delivery_attempted_but_not_received,Delivery Attempted But Not Received,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,delivery_attempted_but_not_received
+delivery_charge_inquiry,Delivery Charge Inquiry,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,delivery_charge_inquiry
+delivery_tat_was_high,Delivery Tat Was High,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,delivery_tat_was_high
+delivery_was_not_available_on_pincode,Delivery Was Not Available On Pincode,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,delivery_was_not_available_on_pincode
+different_item_delivered_than_ordered,Different item delivered than ordered,Connected,Return & Pickup,Actionable,,False,different_item_delivered_than_ordered
+do_not_call_(dnc),Do Not Call (DNC),Not Connected,Open,Non-Actionable,,False,do_not_call_(dnc)
+doctor_asked_to_switch_original_medicine,Doctor Asked To Switch Original Medicine,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,doctor_asked_to_switch_original_medicine
+doctor_consultation_unsatisfactory,Doctor Consultation Unsatisfactory,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,doctor_consultation_unsatisfactory
+doctor_consultation_was_unsatisfactory,Doctor consultation was unsatisfactory,Connected,Consultation & Medicine,Actionable,,False,doctor_consultation_was_unsatisfactory
+doctor_did_not_call_or_call_was_missed,Doctor did not call or call was missed,Connected,Consultation & Medicine,Actionable,,False,doctor_did_not_call_or_call_was_missed
+doesn't_want_to_pay_for_delivery,Doesn'T Want To Pay For Delivery,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,doesn't_want_to_pay_for_delivery
+doesnt_want_to_pay_for_delivery,Doesnt Want To Pay For Delivery,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,doesnt_want_to_pay_for_delivery
+dosage_or_usage_related_query,Dosage or usage related query,Connected,Consultation & Medicine,Actionable,,False,dosage_or_usage_related_query
+early_delivery_request,Early delivery request,Connected,Delivery Issues,Actionable,,False,early_delivery_request
+error_while_making_payment,Error while making payment,Connected,Payments & Refunds,Actionable,,False,error_while_making_payment
+expected_discount_on_listed_price,Expected Discount On Listed Price,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,expected_discount_on_listed_price
+expired_or_near_expiry,Expired or near expiry,Connected,Return & Pickup,Actionable,,False,expired_or_near_expiry
+fee_paid_but_membership_not_activated,Fee paid but membership not activated,Connected,Edge Membership,Actionable,,False,fee_paid_but_membership_not_activated
+forgot_to_order_from_prx,Forgot To Order From Prx,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,forgot_to_order_from_prx
+free_consultation_benefit_not_working,Free consultation benefit not working,Connected,Edge Membership,Actionable,,False,free_consultation_benefit_not_working
+free_delivery_benefit_not_working,Free delivery benefit not working,Connected,Edge Membership,Actionable,,False,free_delivery_benefit_not_working
+incoming_calls_are_restricted,Incoming calls are restricted,Not Connected,Open,Non-Actionable,,False,incoming_calls_are_restricted
+incorrect_amount_refunded,Incorrect amount refunded,Connected,Payments & Refunds,Actionable,,False,incorrect_amount_refunded
+invalid_task,Invalid Task,Not Connected,Open,Non-Actionable,,False,invalid_task
+invalid_wrong_number,Invalid/Wrong Number,Not Connected,Open,Non-Actionable,,False,invalid_wrong_number
+invoice_copy_request,Invoice copy request,Connected,Order Management,Actionable,,False,invoice_copy_request
+issue_not_listed,Issue not listed,Connected,Wallet & Rewards,Actionable,,False,issue_not_listed
+issue_not_listed_account_and_app,Issue Not Listed Account And App,-,Account & App,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_account_and_app
+issue_not_listed_consultation_and_medicine,Issue Not Listed Consultation And Medicine,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_consultation_and_medicine
+issue_not_listed_delivery_issues,Issue Not Listed Delivery Issues,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_delivery_issues
+issue_not_listed_edge_membership,Issue Not Listed Edge Membership,-,Edge Membership,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_edge_membership
+issue_not_listed_order_management,Issue Not Listed Order Management,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_order_management
+issue_not_listed_payments_and_refunds,Issue Not Listed Payments And Refunds,-,Payments & Refunds,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_payments_and_refunds
+issue_not_listed_return_and_pickup,Issue Not Listed Return And Pickup,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_return_and_pickup
+issue_not_listed_wallet_and_rewards,Issue Not Listed Wallet And Rewards,-,Wallet & Rewards,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,issue_not_listed_wallet_and_rewards
+job_enquiry,Job enquiry,Connected,Enquiry & Feedback,Actionable,,False,job_enquiry
+junk_or_spam,Junk or spam,Connected,Enquiry & Feedback,Actionable,,False,junk_or_spam
+language_barrier,Language Barrier,Connected,Open,Non-Actionable,,False,language_barrier
+marked_delivered_but_not_received,Marked delivered but not received,Connected,Delivery Issues,Actionable,,False,marked_delivered_but_not_received
+medication_in_cut_strip_format,Medication In Cut Strip Format,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,medication_in_cut_strip_format
+medicine_discontinued_by_doctor,Medicine Discontinued By Doctor,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,medicine_discontinued_by_doctor
+medicine_not_available_in_website,Medicine Not Available In Website,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,medicine_not_available_in_website
+medicine_not_required_anymore,Medicine Not Required Anymore,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,medicine_not_required_anymore
+medicine_short_supply_discontinued,Medicine Short Supply Discontinued,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,medicine_short_supply_discontinued
+medicine_short_supply_or_discontinued,Medicine Short Supply Or Discontinued,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,medicine_short_supply_or_discontinued
+medicine_supplier_enquiry,Medicine supplier enquiry,Connected,Enquiry & Feedback,Actionable,,False,medicine_supplier_enquiry
+meta_comments_and_dms,Meta Comments And Dms,-,Enquiry & Feedback,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,meta_comments_and_dms
+missing_or_less_quantity_received,Missing or less quantity received,Connected,Return & Pickup,Actionable,,False,missing_or_less_quantity_received
+modification_of_items_in_order,Modification of items in order,Connected,Order Management,Actionable,,False,modification_of_items_in_order
+n_a_query,N A Query,-,Unclassified,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,n_a_query
+need_non_medicinal_product_(vet,Need Non Medicinal Product (Vet,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,need_non_medicinal_product_(vet
+need_non_medicinal_product_vet_fmcg_etc,Need Non Medicinal Product Vet Fmcg Etc,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,need_non_medicinal_product_vet_fmcg_etc
+new_order_request,New Order Request,-,Sales Related,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,new_order_request
+no_longer_needed,No longer needed,Connected,Return & Pickup,Actionable,,False,no_longer_needed
+non_operational_city,Non Operational City,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,non_operational_city
+non_patient,Non Patient,-,Open,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,non_patient
+not_delivered:_return_initiated,Not Delivered: Return Initiated,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,not_delivered:_return_initiated
+not_delivered:_returned_to_warehouse,Not Delivered: Returned To Warehouse,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,not_delivered:_returned_to_warehouse
+not_disposed,Not Disposed,-,Not Disposed,Not Disposed,"Contact never received a disposition — process/compliance gap, not a customer issue signal.",False,not_disposed
+not_reachable,Not Reachable,Not Connected,Open,Non-Actionable,,False,not_reachable
+number_does_not_exit,Number does not Exit,Not Connected,Open,Non-Actionable,,False,number_does_not_exit
+only_called_for_general_query,Only Called For General Query,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,only_called_for_general_query
+only_visited_for_medicine_price_enquiry,Only Visited For Medicine Price Enquiry,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,only_visited_for_medicine_price_enquiry
+order_cancelled_or_edited_without_permission,Order cancelled or edited without permission,Connected,Order Management,Actionable,,False,order_cancelled_or_edited_without_permission
+order_link_shared,Order Link Shared,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,order_link_shared
+ordering_completed_on_call,Ordering Completed On Call,-,Order Management,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,ordering_completed_on_call
+others,Others,Connected,Enquiry & Feedback,Actionable,,False,others
+out_of_delivery_area_full_payment,Out Of Delivery Area Full Payment,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,out_of_delivery_area_full_payment
+partial_payment_link_shared,Partial Payment Link Shared,-,Payments & Refunds,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,partial_payment_link_shared
+partial_return,Partial Return,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,partial_return
+partially_available_medicines,Partially Available Medicines,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,partially_available_medicines
+pickup_delayed_or_refused_by_courier,Pickup delayed or refused by courier,Connected,Return & Pickup,Actionable,,False,pickup_delayed_or_refused_by_courier
+plan_to_purchase_medicines_later,Plan To Purchase Medicines Later,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,plan_to_purchase_medicines_later
+playstore_reviews,Playstore Reviews,-,Enquiry & Feedback,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,playstore_reviews
+post_order_concern_feedback,Post Order Concern Feedback,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,post_order_concern_feedback
+prescription_copy_request,Prescription copy request,Connected,Consultation & Medicine,Actionable,,False,prescription_copy_request
+prescription_rejected_or_failed_to_upload,Prescription rejected or failed to upload,Connected,Order Management,Actionable,,False,prescription_rejected_or_failed_to_upload
+prescription_uploaded_but_order_not_placed,Prescription uploaded but order not placed,Connected,Order Management,Actionable,,False,prescription_uploaded_but_order_not_placed
+price_has_increased,Price Has Increased,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,price_has_increased
+profile_updation_request,Profile updation request,Connected,Account & App,Actionable,,False,profile_updation_request
+prx_coins_expired_incorrectly,PRx Coins expired incorrectly,Connected,Wallet & Rewards,Actionable,,False,prx_coins_expired_incorrectly
+purchased_from_other_number,Purchased From Other Number,-,Open,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,purchased_from_other_number
+quality_concern,Quality Concern,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,quality_concern
+query_about_refer_and_earn,Query about Refer and Earn,Connected,Wallet & Rewards,Actionable,,False,query_about_refer_and_earn
+query_about_substitutes_or_branded_generics,Query about substitutes or branded generics,Connected,Consultation & Medicine,Actionable,,False,query_about_substitutes_or_branded_generics
+referral_earning_not_credited,Referral earning not credited,Connected,Wallet & Rewards,Actionable,,False,referral_earning_not_credited
+refund_not_credited_to_account,Refund not credited to account,Connected,Payments & Refunds,Actionable,,False,refund_not_credited_to_account
+refund_processed,Refund Processed,-,Payments & Refunds,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,refund_processed
+renewal_related_query,Renewal related query,Connected,Edge Membership,Actionable,,False,renewal_related_query
+return_callback,Return Callback,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_callback
+return_in_transit,Return In Transit,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_in_transit
+return_of_insulin,Return Of Insulin,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_of_insulin
+return_policy_inquiry,Return Policy Inquiry,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_policy_inquiry
+return_process_assistance,Return Process Assistance,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_process_assistance
+return_process_guidance,Return Process Guidance,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_process_guidance
+return_process_request,Return Process Request,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_process_request
+return_request,Return Request,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_request
+return_return_करना_चाहता_हूं.,Return Return करना चाहता हूं.,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,return_return_करना_चाहता_हूं.
+rnr,RNR,Not Connected,Open,Non-Actionable,,False,rnr
+sales_related_created_a_new_task,Sales Related - Created a New Task,Connected,Sales Related,Actionable,,False,sales_related_created_a_new_task
+scope_for_sale,Scope For Sale,-,Sales Related,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,scope_for_sale
+shipment_rejected_due_to_damage,Shipment Rejected Due To Damage,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,shipment_rejected_due_to_damage
+shipment_rejected_due_to_damage_or_tampering,Shipment rejected due to damage or tampering,Connected,Delivery Issues,Actionable,,False,shipment_rejected_due_to_damage_or_tampering
+shipment_status_query_(no_delay),Shipment status query (no delay),Connected,Delivery Issues,Actionable,,False,shipment_status_query_(no_delay)
+short_call_disconnected_by_customer,Short Call Disconnected By Customer,-,Open,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,short_call_disconnected_by_customer
+side_effect_or_reaction_reported,Side-effect or reaction reported,Connected,Consultation & Medicine,Actionable,,False,side_effect_or_reaction_reported
+spilled_or_broken_or_spoiled_contents,Spilled or broken or spoiled contents,Connected,Return & Pickup,Actionable,,False,spilled_or_broken_or_spoiled_contents
+stop_promotional_communication,Stop Promotional Communication,-,Account & App,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,stop_promotional_communication
+stop_promotional_communication_request,Stop promotional communication request,Connected,Account & App,Actionable,,False,stop_promotional_communication_request
+substitiute_not_available_on_platinumrx,Substitiute Not Available On Platinumrx,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,substitiute_not_available_on_platinumrx
+substitute_not_giving_same_effects,Substitute Not Giving Same Effects,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,substitute_not_giving_same_effects
+substitute_price_is_more_than_branded_medicines,Substitute Price Is More Than Branded Medicines,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,substitute_price_is_more_than_branded_medicines
+switched_off,Switched off,Not Connected,Open,Non-Actionable,,False,switched_off
+test_lead,Test Lead,Connected,Open,Non-Actionable,,False,test_lead
+unable_to_add_refund_details,Unable to add refund details,Connected,Payments & Refunds,Actionable,,False,unable_to_add_refund_details
+unable_to_apply_wallet_balance,Unable to apply wallet balance,Connected,Wallet & Rewards,Actionable,,False,unable_to_apply_wallet_balance
+unable_to_login,Unable to login,Connected,Account & App,Actionable,,False,unable_to_login
+unable_to_place_a_new_order,Unable to place a new order,Connected,Order Management,Actionable,,False,unable_to_place_a_new_order
+unable_to_track_shipment,Unable To Track Shipment,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,unable_to_track_shipment
+unprofessional_behavior_by_delivery_executive,Unprofessional behavior by delivery executive,Connected,Delivery Issues,Actionable,,False,unprofessional_behavior_by_delivery_executive
+unprofessional_behavior_by_executive,Unprofessional Behavior By Executive,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,unprofessional_behavior_by_executive
+voice_inaudible,Voice Inaudible,-,Open,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,voice_inaudible
+voice_inaudible_not_understandable,Voice Inaudible Not Understandable,-,Open,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,voice_inaudible_not_understandable
+voice_mail,Voice Mail,Not Connected,Open,Non-Actionable,,False,voice_mail
+wants_a_quiker_delivery_time,Wants A Quiker Delivery Time,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,wants_a_quiker_delivery_time
+wants_to_buy_prescribed_medicine_only,Wants To Buy Prescribed Medicine Only,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,wants_to_buy_prescribed_medicine_only
+wants_to_receive_medicine_on_exact_day,Wants To Receive Medicine On Exact Day,-,Delivery Issues,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,wants_to_receive_medicine_on_exact_day
+was_unable_to_contact_prx_for_order,Was Unable To Contact Prx For Order,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,was_unable_to_contact_prx_for_order
+will_browse_and_order_later,Will Browse And Order Later,-,Enquiry & Feedback,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,will_browse_and_order_later
+will_consult_doctor_for_substitiute_medicine,Will Consult Doctor For Substitiute Medicine,-,Consultation & Medicine,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,will_consult_doctor_for_substitiute_medicine
+wrong_item_delivered,Wrong Item Delivered,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,wrong_item_delivered
+wrong_item_delivered_than_ordered,Wrong Item Delivered Than Ordered,-,Return & Pickup,Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,wrong_item_delivered_than_ordered
+wrong_item_ordered,Wrong item ordered,Connected,Return & Pickup,Actionable,,False,wrong_item_ordered
+—,—,-,Unclassified,Non-Actionable,"Legacy/unmapped code — not present in current Dispositions master; classified by CX judgement, please validate.",True,—

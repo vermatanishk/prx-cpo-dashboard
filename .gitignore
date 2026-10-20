@@ -1,0 +1,9 @@
+# Aggregates only live in this repo. Contact-level / PII data never does.
+pipeline/raw/
+pipeline/intermediate/
+pipeline/output/
+pipeline/export/
+**/__pycache__/
+*.pyc
+.DS_Store
+.env

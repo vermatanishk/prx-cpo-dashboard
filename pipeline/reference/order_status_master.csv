@@ -1,0 +1,83 @@
+status_id,status_name,customer_status
+0,pending,Order Confirmation Pending
+1,orderCreated,Order Created
+2,rxCartCreationInProgress,Order Confirmation Pending
+3,rxCartCreationCompleted,Presciption Cart Created
+4,rxOrderRejected,Order Confirmation Pending
+5,orderPaymentPending,Order Payment Pending
+18,rxLlmProcessing,Processing your prescription
+20,rxValid,Prescription is Valid
+31,doctorConsultationPending,Doctor Consultation Scheduled
+32,doctorApproved,Prescription Generated
+33,doctorRejected,Prescription Not Valid
+35,Picker Assigned,Order is being Processed
+37,Picker Accepted,Order is being Processed
+39,Picking Issue Raised,Order is being Processed
+41,Picker TL Accepted,Order is being Processed
+43,Picking Completed,Order is being Processed
+50,pushedToPartner,Order is being Processed
+51,pickupPending,Order is being Processed
+52,pharmacistAccepted,Order is being Processed
+55,invoiceCreated,Order is being Processed
+56,pickupPending,Order is being Processed
+57,disputeManifest,Order Delayed
+58,orderSplit,Order has been split
+59,partnerReassigned,Order is being Processed
+60,sentForPackaging,Order is being Processed
+61,packedAndQCed,Order is ready for Pickup
+62,Label Generated,Order is ready for Pickup
+64,manifested,Order is ready for Pickup
+65,dispatched,Order is ready for Pickup
+66,inTransit,In Transit
+67,reachedDestinationHub,Reached Destination Hub
+68,outForDelivery,Out For Delivery
+69,deliveryAttempted,Delivery Attempted
+70,delivered,Delivered
+71,reachedCustomerGeofence,Out For Delivery
+80,cancelledOrder,Cancelled
+81,hiddenCancelledOrder,Cancelled
+82,newOrderFromPreCart,Cancelled
+85,LostDisputedManifest,Cancelled
+90,fakeDelivered,Cancelled
+102,notDelivered,Not Delivered
+103,notDeliveredReturnedToWarehouse,Not Delivered: Returned To Warehouse
+104,notDeliveredOperationalIssue,Not Delivered: Operational Issue
+106,returnRequested,Return Requested
+107,rtoInitiated,Not Delivered: Return Initiated
+108,rtoInTransit,Not Delivered: Returned To Warehouse
+110,rtoCancelled,Return Cancelled
+112,rtoDelivered,Not Delivered: Returned To Warehouse
+113,rtoReceivedAtWarehouse,Not Delivered: Returned to Warehouse
+115,lost,Cancelled
+117,RTOLost,Not Delivered: Returned to Warehouse
+120,rtoMismatch,Not Delivered: Returned to Warehouse
+125,rtoQualityCheckDone,Items Quality Check Approved
+150,cancelledRefundInitiated,Refund Initiated
+151,cancelledRefundProcessed,Refund Processed
+155,lostRefundInitiated,Refund Initiated
+156,lostRefundProcessed,Refund Processed
+160,rtoRefundInitiated,Refund Initiated
+161,rtoRefundProcessed,Refund Processed
+165,fakeDeliveredRefundInitiated,Refund Initiated
+166,fakeDeliveredRefundProcessed,Refund Processed
+200,returnRequestReceived,Return Requested
+210,partialReturnRequested,Partial Return Requested
+220,PrxPharmacyTeamValidated,Return Request Approved
+230,returnPickupInitiated,Return Pickup Initiated
+231,returnPickupCancelled,Return Pickup Failed
+232,returnPickedUp,Return Picked Up
+233,returnPickupFailed,Return Pickup Initiated
+234,returnInTransit,Return In Transit
+236,returnDelivered,Return Delivered
+238,returnScannedAtWarehouse,Items Scanned at Warehouse
+240,ReturnValidatedAtWarehouse,Items Validated At Warehouse
+244,ItemQualityCheckPendingLt250,Items Quality Check Approved
+245,refundApprovedWareHouseLte250,Items Quality Check Approved
+246,ItemQualityCheckPendingGte250,Items Quality Check Approved
+247,refundApprovedWareHouseGte250,Items Quality Check Approved
+250,ItemQualityCheckAtOurFacility,Items Quality Check Approved
+260,RefundInitiated,Refund Initiated
+262,RefundFailed,Refund Failed
+265,RefundProcessed,Refund Processed
+270,orderReturned,Order Returned
+280,cancelledReturn,Return Cancelled
