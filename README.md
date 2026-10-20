@@ -10,7 +10,7 @@ pipeline (local: raw/ + intermediate/)  ->  Stage 33 export  ->  data/*.csv  --g
                                           Sheet tab "CPO Dashboard"  <-  apps_script/Code.gs  (reads data/ via GitHub API)
 ```
 
-**Privacy:** the repo is private and holds aggregates only (counts by month / channel / disposition). Raw tickets,
+**Privacy:** the repo is public and holds aggregates only (counts by month / channel / disposition). Raw tickets,
 phones, order IDs and intermediate parquet files are git-ignored and never leave the pipeline machine.
 
 ## What the tab shows
@@ -55,12 +55,11 @@ reference files, commits and pushes. Then in the Sheet: **PRX CPO → Refresh fr
 
 ## Apps Script setup (one time)
 
-1. Create a **fine-grained personal access token** (GitHub → Settings → Developer settings): only this repo,
-   permission *Contents: Read-only*.
-2. In the Sheet: *Extensions → Apps Script*. Paste `apps_script/Code.gs`; in *Project Settings* tick
+1. In the Sheet: *Extensions → Apps Script*. Paste `apps_script/Code.gs`; in *Project Settings* tick
    "Show appsscript.json" and paste `apps_script/appsscript.json`.
-3. Reload the Sheet. Menu **PRX CPO → Set GitHub token…**, paste the token (stored in Script Properties, not in the sheet).
-4. **PRX CPO → Refresh from GitHub.** Optional: **Schedule daily refresh (8am)**.
+2. Reload the Sheet, then **PRX CPO → Refresh from GitHub.** No token is needed while the repo is public
+   (if it is made private again, create a read-only fine-grained token and use **Set GitHub token…**).
+3. Optional: **Schedule daily refresh (8am)**.
 
 The script writes to a tab named `CPO Dashboard` (change `CONFIG.SHEET_NAME` to point it at your existing tab).
 

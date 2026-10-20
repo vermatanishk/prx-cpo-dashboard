@@ -10,9 +10,8 @@
  *   Base rows hold numbers from the pipeline; derived rows are LIVE sheet formulas over the tagged
  *   rows, so the arithmetic is visible and editable. Totals use the same formula over the Total column.
  *
- * One-time setup: see README.md ("Apps Script setup"). Needs a fine-grained GitHub token with
- * read-only Contents access to the repo, stored under Script Properties -> GITHUB_TOKEN
- * (menu: PRX CPO -> Set GitHub token).
+ * One-time setup: see README.md ("Apps Script setup"). The repo is public, so no token is needed.
+ * (A token is only used as a fallback if the repo is ever made private again.)
  */
 
 const CONFIG = {
@@ -66,22 +65,24 @@ function removeScheduledRefresh() {
 // ---------------------------------------------------------------------------------------------
 
 function fetchRepoFile_(name) {
+  // Public repo: works with no token. If a token is saved it is sent too (needed only if the repo is made private again).
+  const url = 'https://raw.githubusercontent.com/' + CONFIG.OWNER + '/' + CONFIG.REPO + '/' +
+    CONFIG.BRANCH + '/' + CONFIG.DATA_DIR + '/' + name + '?nocache=' + new Date().getTime();
+  const res = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+  if (res.getResponseCode() === 200) return res.getContentText();
+
   const token = PropertiesService.getScriptProperties().getProperty('GITHUB_TOKEN');
-  if (!token) throw new Error('No GitHub token. Use PRX CPO -> Set GitHub token.');
-  const url = 'https://api.github.com/repos/' + CONFIG.OWNER + '/' + CONFIG.REPO + '/contents/' +
-    CONFIG.DATA_DIR + '/' + name + '?ref=' + CONFIG.BRANCH;
-  const res = UrlFetchApp.fetch(url, {
-    headers: {
-      Authorization: 'Bearer ' + token,
-      Accept: 'application/vnd.github.raw+json',
-      'X-GitHub-Api-Version': '2022-11-28',
-    },
-    muteHttpExceptions: true,
-  });
-  if (res.getResponseCode() !== 200) {
-    throw new Error('GitHub ' + res.getResponseCode() + ' for ' + name + ': ' + res.getContentText().slice(0, 200));
+  if (token) {                                     // private-repo fallback via the API
+    const api = 'https://api.github.com/repos/' + CONFIG.OWNER + '/' + CONFIG.REPO + '/contents/' +
+      CONFIG.DATA_DIR + '/' + name + '?ref=' + CONFIG.BRANCH;
+    const r2 = UrlFetchApp.fetch(api, {
+      headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github.raw+json', 'X-GitHub-Api-Version': '2022-11-28' },
+      muteHttpExceptions: true,
+    });
+    if (r2.getResponseCode() === 200) return r2.getContentText();
+    throw new Error('GitHub ' + r2.getResponseCode() + ' for ' + name + ': ' + r2.getContentText().slice(0, 200));
   }
-  return res.getContentText();
+  throw new Error('GitHub ' + res.getResponseCode() + ' for ' + name + ' (repo is private? then set a token via PRX CPO -> Set GitHub token).');
 }
 
 // ---------------------------------------------------------------------------------------------
