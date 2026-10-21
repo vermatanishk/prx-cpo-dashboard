@@ -22,7 +22,7 @@ const CONFIG = {
   SHEET_NAME: 'CPO Dashboard',
 };
 
-const FMT = { int: '#,##0', pct: '0.00%', ratio: '0.000', dec: '0.00', text: '@' };
+const FMT = { int: '#,##0', pct: '0.00%', ratio: '0.000', dec: '0.00', text: 'General' };
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 // ---------------------------------------------------------------------------------------------
@@ -225,46 +225,65 @@ function refreshDashboard() {
     g.subs.push({ key: r[0], sub_label: r[4] });
   });
 
-  // block tags first so block rows can reference each other
-  function breakdownVolume(title, sec) {
+  // Layout: [display block: "volume | share | IPI"]  [IPO block]  [calculation base blocks, grouped + collapsed]
+  // Tags are assigned in creation order, so the later blocks' tags are known up front.
+  const T_DISP = tagFor_(tagIdx), T_IPO = tagFor_(tagIdx + 1), T_RAW = tagFor_(tagIdx + 2), T_ISS = tagFor_(tagIdx + 3);
+  const RAW = { pos: {} }, ISS = { pos: {} };       // filled when the base blocks are built below
+
+  // --- display block: one text cell per month = "volume | % share | IPI" (live formula over the base blocks) ---
+  //   disposition row: volume | % of ALL raw contacts (row H)      | IPI = volume / issues
+  //   sub-disp row   : volume | % of its disposition's volume      | IPI = volume / issues
+  function pctCell(c, cnt, base) { return 'IFERROR(TEXT(' + c + cnt + '/' + c + base + ',"0.0%"),"-")'; }
+  function ipiCell(c, raw, iss) { return 'IFERROR(TEXT(' + c + raw + '/' + c + iss + ',"0.00"),"-")'; }
+  function triple(c, raw, iss, base) {
+    return '=IF(N(' + c + raw + ')=0,"-",TEXT(' + c + raw + ',"#,##0")&" | "&' + pctCell(c, raw, base) + '&" | "&' + ipiCell(c, raw, iss) + ')';
+  }
+  section('Breakdown by Dispositions -- Contacts before dedup (raw):  volume | % share | IPI', true,
+    'volume | share | IPI.  Disposition: share = vol / ' + H.tag + '.  Sub: share = vol / its disposition.  IPI = ' + T_RAW + ' / ' + T_ISS);
+  groups.forEach(function (g) {
+    push({ type: 'calc', label: g.disp_label, fmt: 'text', bold: true, ftext: '', tag: '',
+      cell: function (c) { return triple(c, RAW.pos['__disp_' + g.disp_key], ISS.pos['__disp_' + g.disp_key], posOf[H.tag]); } });
+    g.subs.forEach(function (s) {
+      push({ type: 'calc', label: s.sub_label, fmt: 'text', indent: 2, ftext: '', tag: '',
+        cell: function (c) { return triple(c, RAW.pos[s.key], ISS.pos[s.key], RAW.pos['__disp_' + g.disp_key]); } });
+    });
+  });
+  blank();
+
+  // --- IPO block (unchanged): issues / orders ---
+  section('Breakdown by Dispositions -- IPO by sub-disposition (issues / orders)', true, 'each row = ' + T_ISS + ' / ' + A.tag);
+  groups.forEach(function (g) {
+    push({ type: 'calc', label: g.disp_label, fmt: 'pct', bold: true, ftext: '', tag: '',
+      cell: function (c) { return '=IFERROR(' + c + ISS.pos['__disp_' + g.disp_key] + '/' + c + posOf[A.tag] + ',0)'; } });
+    g.subs.forEach(function (s) {
+      push({ type: 'calc', label: s.sub_label, fmt: 'pct', indent: 2, ftext: '', tag: '',
+        cell: function (c) { return '=IFERROR(' + c + ISS.pos[s.key] + '/' + c + posOf[A.tag] + ',0)'; } });
+    });
+  });
+  blank();
+
+  // --- calculation base blocks (numeric): raw contacts and issues, rolled up per disposition ---
+  function baseBlock(title, sec, store) {
     const hdr = section(title, true, 'Disposition row = SUM of its sub-dispositions');
-    const subPos = {};
+    const first = rows.length;
     groups.forEach(function (g) {
-      const parent = push({ type: 'calc', label: g.disp_label, fmt: 'int', bold: true, ftext: '', tag: '',
-        cell: null });
-      const first = START_ROW + rows.length;
+      const parent = push({ type: 'calc', label: g.disp_label, fmt: 'int', bold: true, ftext: '', tag: '', cell: null });
+      const f = START_ROW + rows.length;
       g.subs.forEach(function (s) {
         const r = val(s.sub_label, function (p) { return sec + '|' + s.key + '|' + p; }, 'int', { indent: 2, noTag: true });
-        subPos[s.key] = r.row;
+        store.pos[s.key] = r.row;
       });
-      const last = START_ROW + rows.length - 1;
-      parent.cell = function (c) { return '=SUM(' + c + first + ':' + c + last + ')'; };
-      subPos['__disp_' + g.disp_key] = parent.row;
+      const l = START_ROW + rows.length - 1;
+      parent.cell = function (c) { return '=SUM(' + c + f + ':' + c + l + ')'; };
+      store.pos['__disp_' + g.disp_key] = parent.row;
     });
-    blank();
-    return { tag: hdr.tag, pos: subPos };
-  }
-  const BEFORE = breakdownVolume('Breakdown by Dispositions -- Contacts before dedup (raw)', 'disp_before');
-  const AFTER = breakdownVolume('Breakdown by Dispositions -- Issues after dedup (Order ID x Sub-disposition)', 'disp_after');
-
-  function breakdownRatio(title, ftextHdr, fn, fmt) {
-    section(title, true, ftextHdr);
-    groups.forEach(function (g) {
-      push({ type: 'calc', label: g.disp_label, fmt: fmt, bold: true, ftext: '', tag: '',
-        cell: fn(BEFORE.pos['__disp_' + g.disp_key], AFTER.pos['__disp_' + g.disp_key]) });
-      g.subs.forEach(function (s) {
-        push({ type: 'calc', label: s.sub_label, fmt: fmt, indent: 2, ftext: '', tag: '',
-          cell: fn(BEFORE.pos[s.key], AFTER.pos[s.key]) });
-      });
-    });
+    store.first = START_ROW + first - 1;            // include the header row in the collapsible group
+    store.last = START_ROW + rows.length - 1;
     blank();
   }
-  breakdownRatio('Breakdown by Dispositions -- IPO by sub-disposition (issues / orders)',
-    'each row = ' + AFTER.tag + ' / ' + A.tag,
-    function (b, a) { return function (c) { return '=IFERROR(' + c + a + '/' + c + posOf[A.tag] + ',0)'; }; }, 'pct');
-  breakdownRatio('Breakdown by Dispositions -- IPI by sub-disposition (raw contacts / issues)',
-    'each row = ' + BEFORE.tag + ' / ' + AFTER.tag,
-    function (b, a) { return function (c) { return '=IFERROR(' + c + b + '/' + c + a + ',0)'; }; }, 'ratio');
+  baseBlock('Calculation base -- Contacts before dedup (raw)', 'disp_before', RAW);
+  baseBlock('Calculation base -- Issues after dedup (Order ID x Sub-disposition)', 'disp_after', ISS);
+  const GROUP_RANGE = { first: RAW.first, last: ISS.last };
 
   // ===== Notes =====
   section('Notes', false);
@@ -278,7 +297,7 @@ function refreshDashboard() {
   header.push('');
   header.push('Total');
   out.push(header);
-  fmts.push(header.map(function () { return FMT.text; }));
+  fmts.push(header.map(function () { return '@'; }));   // keep 'Sep 2026' as text, not a date
 
   rows.forEach(function (r) {
     const line = new Array(NCOLS).fill('');
@@ -321,7 +340,7 @@ function refreshDashboard() {
       sh.getRange(rr, 1, 1, NCOLS).setFontWeight('bold').setBackground('#f2dcdb');
     } else if (r.bold) {
       sh.getRange(rr, 1, 1, NCOLS).setFontWeight('bold').setBackground('#f7f7f7');
-    } else if (r.type === 'calc' && r.fmt !== 'int') {
+    } else if (r.type === 'calc' && r.tag && r.fmt !== 'int') {
       sh.getRange(rr, 2, 1, NCOLS - 1).setFontWeight('bold');
     } else if (r.type === 'note') {
       sh.getRange(rr, 2).setFontStyle('italic').setFontColor('#595959');
@@ -331,6 +350,11 @@ function refreshDashboard() {
   sh.setColumnWidth(1, 44); sh.setColumnWidth(2, 520); sh.setColumnWidth(3, 190);
   for (let c = FIRST_COL; c <= NCOLS; c++) sh.setColumnWidth(c, c === SPACER_COL ? 18 : 92);
   sh.setFrozenRows(1); sh.setFrozenColumns(3);
+  try {                                            // collapse the numeric calculation-base rows (expand with the +)
+    const grp = sh.getRange(GROUP_RANGE.first, 1, GROUP_RANGE.last - GROUP_RANGE.first + 1, 1);
+    grp.shiftRowGroupDepth(1);
+    sh.getRowGroup(GROUP_RANGE.first, 1).collapse();
+  } catch (e) { /* grouping is cosmetic */ }
   sh.getRange('A1').setNote('Generated ' + meta.generated_at_utc + ' UTC · version ' + meta.version_tag +
     '\nSource: github.com/' + CONFIG.OWNER + '/' + CONFIG.REPO + ' (' + CONFIG.BRANCH + ')');
   SpreadsheetApp.getActive().toast('CPO Dashboard refreshed (' + meta.version_tag + ')', 'PRX CPO', 5);

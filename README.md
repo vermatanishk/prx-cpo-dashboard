@@ -21,7 +21,9 @@ One continuous view, months latest-first plus Total (same as the original "Summa
 2. Contact volume by channel — before and after dedup (with reconciliation check rows)
 3. Contacts to resolution — by Order ID, and by Order ID × Sub-disposition, with Bot / Human split,
    percentiles, and Overall FCR / BFCR / HFCR
-4. Breakdown by disposition → sub-disposition: contacts, issues, IPO, IPI
+4. Breakdown by disposition → sub-disposition (pre-dedup): each cell reads `volume | % share | IPI` —
+   disposition rows: share of all contacts; sub-disposition rows: share of their disposition. IPO by sub-disposition follows;
+   the numeric calculation-base rows sit underneath in a collapsed group (click + to expand)
 
 ### Reading the formulas
 
